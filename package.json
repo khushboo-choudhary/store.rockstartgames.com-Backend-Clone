@@ -1,0 +1,38 @@
+{
+  "name": "store.rockstartgames.com-backend-clone",
+  "version": "1.0.0",
+  "description": "Building Backend Clone of store.rockstargames.com website as an construct week project at Masai School ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shreyasgkhakal100/store.rockstartgames.com-Backend-Clone.git"
+  },
+  "keywords": [
+    "Rock",
+    "Star",
+    "Games",
+    "gaming",
+    "website",
+    "clone",
+    "node.js",
+    "mongoose",
+    "mongodb",
+    "express",
+    "Oauth",
+    "api's",
+    "backend"
+  ],
+  "author": "Shreyas Khakal, Aman Raj, Khushboo, Shantanu Bombatkar, Rohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shreyasgkhakal100/store.rockstartgames.com-Backend-Clone/issues"
+  },
+  "homepage": "https://github.com/Shreyasgkhakal100/store.rockstartgames.com-Backend-Clone#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
+  }
+}
