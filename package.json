@@ -4,7 +4,7 @@
   "description": "Building Backend Clone of store.rockstargames.com website as an construct week project at Masai School ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/Shreyasgkhakal100/store.rockstartgames.com-Backend-Clone#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
   }
