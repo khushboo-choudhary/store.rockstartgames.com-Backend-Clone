@@ -1,6 +1,6 @@
 const express=require("express");
 
-const connect = require("./confige/db");
+const connect = require("./config/db");
 
 const gearController=require("./controllers/gear.controller");
 const gamesController=require("./controllers/games.controller");
