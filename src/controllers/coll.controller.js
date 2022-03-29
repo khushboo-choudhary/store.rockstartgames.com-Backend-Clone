@@ -36,13 +36,13 @@ router.get("/red/apparel", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"apparel",collection:"red"})
+        const collection=await Coll.find({category:"apparel",coll:"red"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"apparel",collection:"red"}).countDocuments())/size
+            (await Coll.find({category:"apparel",coll:"red"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
@@ -55,13 +55,13 @@ router.get("/red/gear", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"gear",collection:"red"})
+        const collection=await Coll.find({category:"gear",coll:"red"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"gear",collection:"red"}).countDocuments())/size
+            (await Coll.find({category:"gear",coll:"red"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
@@ -74,13 +74,13 @@ router.get("/grand/apparel", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"apparel",collection:"grand"})
+        const collection=await Coll.find({category:"apparel",coll:"grand"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"apparel",collection:"grand"}).countDocuments())/size
+            (await Coll.find({category:"apparel",coll:"grand"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
@@ -93,13 +93,13 @@ router.get("/grand/gear", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"gear",collection:"grand"})
+        const collection=await Coll.find({category:"gear",coll:"grand"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"gear",collection:"grand"}).countDocuments())/size
+            (await Coll.find({category:"gear",coll:"grand"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
@@ -112,13 +112,13 @@ router.get("/rock/apparel", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"apparel",collection:"rock"})
+        const collection=await Coll.find({category:"apparel",coll:"rock"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"apparel",collection:"rock"}).countDocuments())/size
+            (await Coll.find({category:"apparel",coll:"rock"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
@@ -131,13 +131,13 @@ router.get("/rock/gear", async (req,res) => {
     try{
         const page = req.query.page || 1;
         const size = req.query.size || 6;
-        const collection=await Coll.find({category:"gear",collection:"rock"})
+        const collection=await Coll.find({category:"gear",coll:"rock"})
         .skip((page -1)*size)
         .limit(size)
         .lean().exec();
  
         const totalPages = Math.ceil(
-            (await Coll.find({category:"gear",collection:"rock"}).countDocuments())/size
+            (await Coll.find({category:"gear",coll:"rock"}).countDocuments())/size
         );
 
         return res.send({collection,totalPages});
