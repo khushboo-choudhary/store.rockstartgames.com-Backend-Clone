@@ -3,11 +3,16 @@ const mongoose =require("mongoose");
 const gamesSchema = new mongoose.Schema(
     {
     name:{type:String,required:true},
-    description:{type:String,required:true},
+    logo:{type:String,required:true},
+    heroimg:{type:String,required:true},
     price:{type:Number,required:true},
-    category:{type:String,required:true},
-    image:{type:String,required:true},
-    allimages:[{type:String,required:true}]
+    gamesDetails:{type:String,required:true},
+    keyfeaTitle:[{type:String,required:false}],
+    keyfeaDesc:[{type:String,required:false}],
+    keyfeaImg:[{type:String,required:false}],
+    videos:[{type:String,required:false}],
+    ss:[{type:String,required:true}],
+    category:{type:String,required:true}
     },
     {
       versionKey:false,
@@ -15,6 +20,6 @@ const gamesSchema = new mongoose.Schema(
     }
 );
 
-const Gear = mongoose.model("gear",gearSchema);
+const Games = mongoose.model("games",gamesSchema);
 
-module.exports=Gear;
+module.exports=Games;
