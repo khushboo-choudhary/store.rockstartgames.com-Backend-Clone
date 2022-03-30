@@ -4,6 +4,9 @@ const connect = require("./config/db");
 const {login, register, newToken} = require("./controllers/auth.controller");
 const userController = require("./controllers/user.controller");
 const passport = require("./config/auth");
+const gearController = require("./controllers/gear.controller");
+const gamesController = require("./controllers/games.controller");
+const collController = require("./controllers/coll.controller");
 
 const app = express();
 
