@@ -29,7 +29,7 @@ const login = async (req, res)=>{
 
         const token = newToken(user);
 
-        return res.status(200).json({msg: "Login Successful", nickName:user.nickName, token});
+        return res.status(200).json({msg: "Login Successful", nickName:user.nickName, profileImage: user.profileImage, token});
     } catch (err) {
         return res.status(500).send(err.message);
     }
@@ -48,7 +48,14 @@ const register = async (req, res)=>{
 
         const token = newToken(newUser);
 
-        return res.status(201).json({msg: "User created successfully", nickName:newUser.nickName, token});
+        return res
+          .status(201)
+          .json({
+            msg: "User created successfully",
+            nickName: user.nickName,
+            profileImage: user.profileImage,
+            token,
+          });
     }catch(err){
         return res.status(500).send(err.message);
     }

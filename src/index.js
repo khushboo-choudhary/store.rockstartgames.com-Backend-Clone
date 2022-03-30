@@ -48,18 +48,23 @@ app.get(
 );
 
 app.get("/google/callback", passport.authenticate("google", {
-    successRedirect: "/auth/google/success",
+    failureRedirect: "/auth/google/failure"
 }),
     (req, res)=>{
         const {user} = req;
+        console.log(req);
         const token = newToken(user);
-        return res.status(200).json({msg: "Login Successful", token});
+        return res
+          .status(200)
+          .json({
+            msg: "Login Successful",
+            nickName: user.nickName,
+            profileImage: user.profileImage,
+            token,
+          });
     }
 );
 
-app.get("/auth/google/success", (req, res)=>{
-    return res.status(200).json({msg: "Login Successful"});
-});
 
 app.get("/auth/google/failure", (req, res)=>{
     return res.status(400).json({msg: "Login Failed"});
