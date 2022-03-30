@@ -36,12 +36,13 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
+    "loader": "^2.1.1",
     "mongoose": "^6.2.9",
     "passport": "^0.5.2",
     "passport-google-oauth2": "^0.2.0",
     "uuid": "^8.3.2"
   },
-    "engines": {
+  "engines": {
     "node": "16.14.0"
   }
 }
