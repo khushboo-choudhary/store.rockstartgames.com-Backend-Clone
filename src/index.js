@@ -37,7 +37,6 @@ app.get(
     scope: [
       "profile",
       "email",
-      "https://www.googleapis.com/auth/user.addresses.read",
     ],
   })
 );
