@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     password: {type: String, required: true},
     dob: {type: Date},
     country: {type: String},
-    profileImage: {type: String},
+    profileImage: {type: String, default:"https://a.rsg.sc/n/shreyas1000/n"},
 }, {
     versionKey: false,
     timestamps: true
