@@ -4,7 +4,7 @@
   "description": "Building Backend Clone of store.rockstargames.com website as an construct week project at Masai School ",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -40,5 +40,8 @@
     "passport": "^0.5.2",
     "passport-google-oauth2": "^0.2.0",
     "uuid": "^8.3.2"
+  },
+    "engines": {
+    "node": "16.14.0"
   }
 }
