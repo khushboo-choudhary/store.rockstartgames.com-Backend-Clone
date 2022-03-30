@@ -7,9 +7,11 @@ const passport = require("./config/auth");
 const gearController = require("./controllers/gear.controller");
 const gamesController = require("./controllers/games.controller");
 const collController = require("./controllers/coll.controller");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 
