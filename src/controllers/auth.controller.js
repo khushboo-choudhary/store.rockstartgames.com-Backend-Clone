@@ -52,8 +52,8 @@ const register = async (req, res)=>{
           .status(201)
           .json({
             msg: "User created successfully",
-            nickName: user.nickName,
-            profileImage: user.profileImage,
+            nickName: newUser.nickName,
+            profileImage: newUser.profileImage,
             token,
           });
     }catch(err){
