@@ -20,6 +20,10 @@ app.use("/users", userController);
 app.post("/login", login)
 app.post("/register", register)
 
+//routes from aman code
+app.use("/gear", gearController);
+app.use("/games", gamesController);
+app.use("/coll", collController);
 
 //google oauth
 passport.serializeUser(function(user, done){
