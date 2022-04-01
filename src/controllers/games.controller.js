@@ -41,14 +41,6 @@ router.patch("/:id", async (req,res) => {
     } 
 })
 
-router.get("/:id", async (req,res) => {
-    try{
-        const games=await Games.findById(req.params.id);
-        return res.send(games);
-    }catch(err){
-      return res.send(err.message);
-    } 
-})
 
 router.get("/red", async (req,res) => {
     try{
@@ -88,6 +80,15 @@ router.get("/grand", async (req,res) => {
     } 
 });
 
+router.delete("/:id", async (req,res) => {
+    try{
+        const games = await Games.findByIdAndDelete(req.params.id);
+        return res.send(games);
+    }catch(err){
+      return res.send(err.message);
+    } 
+})
+
 router.get("/rock", async (req,res) => {
     try{
         const page = req.query.page || 1;
@@ -105,6 +106,16 @@ router.get("/rock", async (req,res) => {
     }catch(err){
       return res.send(err.message);
     } 
+});
+
+
+router.get("/:id", async (req, res) => {
+  try {
+    const games = await Games.findById(req.params.id);
+    return res.send(games);
+  } catch (err) {
+    return res.send(err.message);
+  }
 });
 
 
