@@ -146,5 +146,14 @@ router.get("/rock/gear", async (req,res) => {
     } 
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const coll = await Coll.findById(req.params.id);
+    return res.send(coll);
+  } catch (err) {
+    return res.send(err.message);
+  }
+});
+
 
 module.exports=router;

@@ -110,8 +110,8 @@ router.get("/collectibles", async (req,res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const games = await Gear.findById(req.params.id);
-    return res.send(games);
+    const gear = await Gear.findById(req.params.id);
+    return res.send(gear);
   } catch (err) {
     return res.send(err.message);
   }
