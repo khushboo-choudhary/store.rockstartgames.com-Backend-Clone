@@ -32,6 +32,24 @@ router.get("", async (req,res) => {
     } 
 });
 
+router.patch("/:id", async (req,res) => {
+    try{
+        const games=await Games.findByIdAndUpdate(req.params.id,req.body,{new:true});
+        return res.send(games);
+    }catch(err){
+      return res.send(err.message);
+    } 
+})
+
+router.get("/:id", async (req,res) => {
+    try{
+        const games=await Games.findById(req.params.id);
+        return res.send(games);
+    }catch(err){
+      return res.send(err.message);
+    } 
+})
+
 router.get("/red", async (req,res) => {
     try{
         const page = req.query.page || 1;
