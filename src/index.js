@@ -7,6 +7,7 @@ const passport = require("./config/auth");
 const gearController = require("./controllers/gear.controller");
 const gamesController = require("./controllers/games.controller");
 const collController = require("./controllers/coll.controller");
+const paymentController = require("./controllers/payment.controller");
 const cors = require("cors");
 
 const app = express();
@@ -24,6 +25,10 @@ app.use("/users", userController);
 //login and register controller
 app.post("/login", login)
 app.post("/register", register)
+
+
+//api for payment gateway
+app.use("/payment", paymentController);
 
 //routes from aman code
 app.use("/gear", gearController);
