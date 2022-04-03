@@ -62,7 +62,7 @@ app.get("/google/callback", passport.authenticate("google", {
         console.log(req);
         const token = newToken(user);
         return res.redirect(
-          `http://localhost:3000/google-oauth2success?token=${token}&nickName=${user.nickName}&profileImage=${user.profileImage}`
+          `https://store-rockstargames.vercel.app/google-oauth2success?token=${token}&nickName=${user.nickName}&profileImage=${user.profileImage}`
         );
     }
 );
