@@ -61,14 +61,12 @@ app.get("/google/callback", passport.authenticate("google", {
         const {user} = req;
         console.log(req);
         const token = newToken(user);
-        return res
-          .status(200)
-          .json({
-            msg: "Login Successful",
-            nickName: user.nickName,
-            profileImage: user.profileImage,
-            token,
-          });
+        return res.redirect("http://localhost:3000/google-oauth2success", {
+          msg: "Login Successful",
+          nickName: user.nickName,
+          profileImage: user.profileImage,
+          token,
+        });
     }
 );
 
