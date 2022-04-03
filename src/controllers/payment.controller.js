@@ -23,7 +23,8 @@ router.post("/pay", authenticate, async (req, res) => {
         data.purpose=req.body.desc
         data.amount=req.body.amount
         data.buyer_name=req.user.nickName
-        data.redirect_url = "http://www.example.com/payment/success";
+        data.redirect_url =
+          "https://store-rockstargames.vercel.app//payment/successful";
         data.email=req.user.email,
         data.phone=req.user.phone || "9999999999"
         data.send_email=false
