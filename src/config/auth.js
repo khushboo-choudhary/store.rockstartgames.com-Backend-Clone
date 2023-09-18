@@ -10,7 +10,7 @@ passport.use(
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL:
-        "https://obscure-citadel-15133.herokuapp.com/google/callback",
+        "https://clear-pear-tuna.cyclic.app/google/callback",
     },
     async function (request, accessToken, refreshToken, profile, done) {
       let user = await User.findOne({ email: profile?.email }).lean().exec();
