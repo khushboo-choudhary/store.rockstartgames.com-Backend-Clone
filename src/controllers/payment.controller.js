@@ -20,7 +20,7 @@ router.post("/pay", authenticate, async (req, res) => {
     data.amount = req.body.amount;
     data.buyer_name = req.user.nickName;
     data.redirect_url =
-      "https://store-rockstartgames-com-frontend-clone-pro.vercel.app/payment/successful";
+      "https://store-rockstartgames-com-frontend-clone.vercel.app/payment/successful";
     (data.email = req.user.email),
       (data.phone = req.user.phone || "9999999999");
     data.send_email = false;
