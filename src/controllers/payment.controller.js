@@ -10,6 +10,7 @@ const AUTH_KEY = process.env.INSTAMOJO_AUTH_KEY;
 
 router.post("/pay", authenticate, async (req, res) => {
   try {
+    console.log("bdj nckjoie jfkfiowf jjojfwf wefkreguih", req.body);
     const paymentData = {};
 
     Insta.setKeys(API_KEY, AUTH_KEY);
