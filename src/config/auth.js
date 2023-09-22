@@ -13,7 +13,6 @@ passport.use(
     },
     async function (request, accessToken, refreshToken, profile, done) {
       let user = await User.findOne({ email: profile?.email }).lean().exec();
-      // console.log(profile);
       if (!user) {
         let nickName = profile?.email.split("@")[0];
         user = await User.create({

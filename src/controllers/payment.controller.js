@@ -23,20 +23,18 @@ router.post("/pay", authenticate, async (req, res) => {
     data.buyer_name = req.user.nickName;
     data.redirect_url =
       "https://store-rockstartgames-com-frontend-clone.vercel.app/payment/successful";
-    (data.email = req.user.email || "k@gmail.com"),
+    (data.email = req.user.email),
       (data.phone = req.user.phone || "9999999999");
     data.send_email = false;
     data.send_sms = false;
     data.webhook = `http://www.example.com/payment/webhook`;
     data.allow_repeated_payments = false;
-    console.log("jqhdugyudg", data);
     Insta.createPayment(data, function (error, response) {
       if (error) {
         // some error
       } else {
         // Payment redirection link at response.payment_request.longurl
         const responseData = JSON.parse(response);
-        console.log("jkhdwihgduyqg", responseData);
         res.status(200).send(responseData);
       }
     });
