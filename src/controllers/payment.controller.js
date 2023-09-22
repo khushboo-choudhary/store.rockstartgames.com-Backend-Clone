@@ -36,7 +36,7 @@ router.post("/pay", authenticate, async (req, res) => {
       } else {
         // Payment redirection link at response.payment_request.longurl
         const responseData = JSON.parse(response);
-        console.log("jkhdwihgduyqg", reseponseData);
+        console.log("jkhdwihgduyqg", responseData);
         res.status(200).send(responseData);
       }
     });
